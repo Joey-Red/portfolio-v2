@@ -1,0 +1,540 @@
+// Variables
+$dark-color: #131515;
+$med-color: #2b2c28;
+$accent-color: #339989;
+$light-color: #eff2ef;
+
+// Mixins
+@mixin DefaultText() {
+  color: $light-color;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+@mixin circleButton {
+  border-radius: 50%;
+  color: $med-color;
+  background-color: $accent-color;
+  height: 40px;
+  width: 40px;
+  border: none;
+}
+// Reset
+*,
+::before,
+::after,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+html {
+  background-color: $light-color;
+}
+// Nav Styles
+.appNavInside {
+  display: flex;
+  background-color: $light-color;
+  position: relative;
+  padding: 20px 40px;
+  .navLinkContainer {
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .navLinkContainer {
+    a,
+    a:visited {
+      border: none;
+      background: none;
+      @include DefaultText();
+      color: $med-color;
+      margin: 0 20px;
+    }
+  }
+  .links {
+    position: relative;
+  }
+  .gitLink,
+  .twitLink,
+  .linkedIn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    position: absolute;
+    color: $med-color;
+  }
+  .gitLink {
+    right: 80px;
+    top: 20px;
+  }
+  .twitLink {
+    right: 80px;
+    top: 80px;
+  }
+  .linkedIn {
+    right: 10px;
+    top: 80px;
+  }
+  .links {
+    a,
+    a:visited {
+      color: $dark-color;
+      font-size: 1rem;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .toggleSocials {
+    @include circleButton();
+    position: absolute;
+    right: 40px;
+    top: 30px;
+  }
+}
+.appNav::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid $med-color 1px;
+  width: 50%;
+}
+.fishLogo {
+  position: absolute;
+  left: 10px;
+}
+.fishImg {
+  height: 62px;
+}
+
+// Welcome section
+.welcome {
+  background-color: $light-color;
+  display: flex;
+  font-size: 3rem;
+  padding: 40px;
+  color: $dark-color;
+  span {
+    color: $accent-color;
+    font-weight: 800;
+  }
+  p {
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+}
+
+// Skills Section
+.skillsContainer {
+  background-color: $accent-color;
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  margin: 0 auto;
+  justify-content: center;
+  .description {
+    word-spacing: 3px;
+    color: $dark-color;
+    font-weight: 600;
+    width: 50vw;
+    h3 {
+      font-size: 3rem;
+      color: $light-color;
+    }
+    p {
+      font-size: 1.3rem;
+      max-width: 50%;
+    }
+  }
+  .skillsIcons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    font-size: 2rem;
+    justify-content: center;
+  }
+  .faContainer {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    color: $dark-color;
+    svg,
+    .imgContainer {
+      min-width: 40px;
+    }
+    svg,
+    img {
+      align-content: center;
+      margin: auto 0;
+      display: flex;
+    }
+    .imgContainer {
+      justify-content: center;
+      display: flex;
+    }
+  }
+  .insideText {
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    align-self: flex-end;
+    text-align: left;
+  }
+}
+// Projects Page
+.projectsHeader {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    max-width: 80vw;
+  }
+}
+.projectsContainer {
+  position: relative;
+  display: flex;
+  margin: 0 auto 40px auto;
+  justify-content: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  .projectNav {
+    position: absolute;
+    top: 50%;
+    @include circleButton();
+    margin: 0px 20px;
+  }
+  #activeProject {
+    position: relative;
+    #leftButton {
+      left: -100px;
+      z-index: 9999;
+    }
+    #rightButton {
+      right: -100px;
+      z-index: 9999;
+    }
+  }
+  img {
+    display: flex;
+    margin: 0 auto;
+  }
+  .screenshotLeft {
+    left: -20px;
+  }
+  .screenshotRight {
+    right: -20px;
+  }
+}
+
+.projImageContainer {
+  display: flex;
+}
+.projectContainer {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  img {
+    height: 50vh;
+    box-shadow: 0px 0px 10px 1px $med-color;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  h3 {
+    display: block;
+    text-align: center;
+    margin: 10px 0px;
+  }
+  button {
+    align-self: center;
+    @include circleButton();
+    position: absolute;
+  }
+  .projectDescription {
+    max-width: 60ch;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    min-height: 100px;
+  }
+  .projectLinks {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+    a,
+    a:visited {
+      color: $dark-color;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+}
+.mainContent {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+// About Section
+.aboutContainer {
+  background-color: $accent-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  .aboutMeHeader {
+    text-align: center;
+  }
+  .aboutMeBody {
+    color: $dark-color;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    word-spacing: 3px;
+    line-height: 1.3;
+    max-width: 60ch;
+  }
+  .mySocials {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-top: 12px;
+    justify-content: center;
+    a,
+    a:visited {
+      color: $dark-color;
+      text-decoration: none;
+      svg {
+        margin: 0px 4px;
+      }
+    }
+  }
+  .goodbye {
+    font-size: 1.2rem;
+    max-width: 60ch;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bolder;
+    span {
+      letter-spacing: 1px;
+    }
+  }
+}
+.aboutContainerInside {
+  max-width: max-content;
+  position: relative;
+}
+.toTop,
+.toTop:visited {
+  position: absolute;
+  display: flex;
+  color: $dark-color;
+  @include circleButton();
+  justify-content: center;
+  align-items: center;
+  background-color: $light-color;
+  right: -50px;
+  top: 50%;
+  justify-self: flex-end;
+}
+
+// Media Queries
+@media only screen and (max-width: 1447px) {
+  .redditProject {
+    img {
+      height: auto;
+      max-width: 65vw;
+    }
+  }
+}
+@media only screen and (max-width: 1111px) {
+  .welcome p {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 1096px) {
+  .skillsContainer {
+    .description p {
+      max-width: none;
+      margin-right: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .skillsContainer .skillsIcons {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .projectContainer img {
+    height: auto;
+    width: 60vw;
+  }
+  .projectsContainer {
+    .screenshotRight {
+      right: 20px;
+    }
+    .screenshotLeft {
+      left: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 824px) {
+  .projectsContainer {
+    #activeProject {
+      #rightButton {
+        right: -5vw;
+      }
+      #leftButton {
+        left: -5vw;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 737px) {
+  .projectsContainer {
+    .screenshotRight {
+      right: 40px;
+    }
+    .screenshotLeft {
+      left: 40px;
+    }
+    #activeProject {
+      #rightButton {
+        right: 0vw;
+      }
+      #leftButton {
+        left: 0vw;
+      }
+    }
+  }
+  .aboutContainerInside {
+    max-width: 75vw;
+  }
+}
+@media only screen and (max-width: 637px) {
+  .skillsContainer {
+    display: block;
+    .description {
+      width: fit-content;
+      margin-bottom: 12px;
+    }
+    .description p {
+      margin-right: 0;
+    }
+  }
+  .skillsContainer .skillsIcons {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .projectsContainer {
+    .screenshotRight {
+      right: 70px;
+    }
+    .screenshotLeft {
+      left: 70px;
+    }
+  }
+}
+@media only screen and (max-width: 737px) {
+  .skillsContainer .faContainer {
+    gap: 0px;
+  }
+}
+@media only screen and (max-width: 644px) {
+  .projectsHeader p {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .projectsContainer {
+    .projectNav {
+      top: 36%;
+    }
+  }
+}
+@media only screen and (max-width: 496px) {
+  .welcome p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .projectsContainer {
+    .screenshotRight {
+      right: 40px;
+    }
+    .screenshotLeft {
+      left: 40px;
+    }
+  }
+}
+@media only screen and (max-width: 440px) {
+  .appNavInside .navLinkContainer a,
+  .appNavInside .navLinkContainer a:visited {
+    margin: 0 4px;
+  }
+  .aboutContainerInside {
+    .aboutMeBody,
+    .goodbye {
+      font-size: 1rem;
+      font-weight: bolder;
+    }
+  }
+  .toTop,
+  .toTop:visited {
+    right: -40px;
+  }
+}
+@media only screen and (max-width: 389px) {
+  .appNavInside .toggleSocials {
+    right: 20px;
+  }
+  .projectsContainer {
+    .screenshotRight {
+      right: 55px;
+    }
+    .screenshotLeft {
+      left: 55px;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .projectsContainer {
+      .projectNav {
+        top: 30%;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes feedback {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.btnAnimation:active {
+  animation-name: feedback;
+  animation-duration: 2s;
+}
