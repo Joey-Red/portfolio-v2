@@ -143,7 +143,6 @@ html {
 
 // Skills Section
 .skillsContainer {
-  border-top: solid $dark-color 1px;
   background-color: $accent-color;
   display: flex;
   align-items: center;
@@ -207,9 +206,6 @@ html {
 }
 
 // Projects Page
-.projectPageContainer {
-  border-top: solid $dark-color 1px;
-}
 .projectsHeader {
   margin-top: 40px;
   margin-bottom: 12px;
@@ -226,7 +222,7 @@ html {
 .projectsContainer {
   position: relative;
   display: flex;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 0px auto;
   justify-content: center;
   flex-direction: column;
   justify-items: center;
@@ -262,7 +258,6 @@ html {
     right: -20px;
   }
 }
-
 .projImageContainer {
   display: flex;
 }
@@ -322,7 +317,6 @@ html {
 
 // About Section
 .aboutContainer {
-  border-top: solid $dark-color 1px;
   background-color: $accent-color;
   display: flex;
   flex-direction: column;
@@ -457,6 +451,19 @@ html {
   .skillsContainer .faContainer {
     gap: 0px;
   }
+  .appNavInside {
+    .linkedIn {
+      right: 0px;
+      top: 70px;
+    }
+    .gitLink {
+      right: 60px;
+    }
+    .twitLink {
+      right: 60px;
+      top: 70px;
+    }
+  }
 }
 @media only screen and (max-width: 644px) {
   .projectsHeader p {
@@ -501,6 +508,17 @@ html {
       top: 36%;
     }
   }
+  .appNavInside {
+    .navLinkContainer {
+      a,
+      a:visited {
+        margin: 0 5px;
+      }
+    }
+  }
+  .appNav::after {
+    width: 30%;
+  }
 }
 @media only screen and (max-width: 496px) {
   .welcome p {
@@ -515,12 +533,45 @@ html {
       left: 40px;
     }
   }
+  .appNavInside {
+    .toggleSocials {
+      right: 20px;
+    }
+    .linkedIn {
+      right: -20px;
+      top: 70px;
+    }
+    .gitLink {
+      right: 40px;
+    }
+    .twitLink {
+      right: 40px;
+      top: 70px;
+    }
+  }
 }
 @media only screen and (max-width: 483px) {
   .skillsContainer {
     padding: 50px;
     .description p {
       width: 84vw;
+    }
+  }
+  .appNavInside {
+    .toggleSocials {
+      right: 0px;
+    }
+    .linkedIn {
+      right: -37.35px;
+      top: 70px;
+    }
+    .gitLink {
+      right: -37.35px;
+      top: 190px;
+    }
+    .twitLink {
+      right: -37.35px;
+      top: 130px;
     }
   }
 }
@@ -544,23 +595,20 @@ html {
     right: -40px;
   }
 }
-@media only screen and (max-width: 389px) {
-  .appNavInside .toggleSocials {
-    right: 20px;
+@media only screen and (max-width: 400px) {
+  .projectContainer {
+    .projectDescription {
+      min-height: 161px;
+    }
   }
+}
+@media only screen and (max-width: 389px) {
   .projectsContainer {
     .screenshotRight {
       right: 55px;
     }
     .screenshotLeft {
       left: 55px;
-    }
-  }
-  @media only screen and (max-width: 575px) {
-    .projectsContainer {
-      .projectNav {
-        top: 30%;
-      }
     }
   }
 }

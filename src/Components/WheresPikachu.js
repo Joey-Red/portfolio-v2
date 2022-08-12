@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import WP1 from "../img/PjScreenshots2/WP1.png";
@@ -7,6 +7,13 @@ import WP3 from "../img/PjScreenshots2/WP3.png";
 
 function WheresPikachu() {
   let [activePhoto, setActivePhoto] = useState(1);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      nextPhoto();
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [activePhoto]);
 
   let nextPhoto = () => {
     if (activePhoto === 3) {

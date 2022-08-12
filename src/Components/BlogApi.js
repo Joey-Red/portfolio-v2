@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,6 +10,13 @@ import blogApi5 from "../img/PjScreenshots2/Blog5.png";
 
 function BlogApi() {
   let [activePhoto, setActivePhoto] = useState(1);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      nextPhoto();
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [activePhoto]);
 
   let nextPhoto = () => {
     if (activePhoto === 5) {
