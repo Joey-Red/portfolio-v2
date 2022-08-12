@@ -100,6 +100,14 @@ html {
     right: 40px;
     top: 30px;
   }
+  .turnButton {
+    transform: rotateZ(90deg);
+    transition: 1s;
+  }
+  .reverseTurn {
+    transform: rotateZ(180deg);
+    transition: 1s;
+  }
 }
 .appNav::after {
   content: "";
@@ -135,12 +143,14 @@ html {
 
 // Skills Section
 .skillsContainer {
+  border-top: solid $dark-color 1px;
   background-color: $accent-color;
   display: flex;
   align-items: center;
   padding: 80px;
   margin: 0 auto;
   justify-content: center;
+
   .description {
     word-spacing: 3px;
     color: $dark-color;
@@ -160,7 +170,7 @@ html {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     font-size: 2rem;
-    justify-content: center;
+    margin-top: 57px;
   }
   .faContainer {
     display: flex;
@@ -189,8 +199,17 @@ html {
     align-self: flex-end;
     text-align: left;
   }
+  .faContainer .imgContainer img {
+    max-height: 32px;
+    width: auto;
+    align-self: center;
+  }
 }
+
 // Projects Page
+.projectPageContainer {
+  border-top: solid $dark-color 1px;
+}
 .projectsHeader {
   margin-top: 40px;
   margin-bottom: 12px;
@@ -217,6 +236,9 @@ html {
     top: 50%;
     @include circleButton();
     margin: 0px 20px;
+  }
+  .none {
+    filter: grayscale(1);
   }
   #activeProject {
     position: relative;
@@ -274,7 +296,7 @@ html {
     margin: 0 auto;
     font-size: 1.2rem;
     font-weight: bolder;
-    min-height: 100px;
+    min-height: 115px;
   }
   .projectLinks {
     display: flex;
@@ -289,6 +311,9 @@ html {
     }
   }
 }
+.descrContainer {
+  min-height: 200px;
+}
 .mainContent {
   display: flex;
   position: relative;
@@ -297,6 +322,7 @@ html {
 
 // About Section
 .aboutContainer {
+  border-top: solid $dark-color 1px;
   background-color: $accent-color;
   display: flex;
   flex-direction: column;
@@ -306,12 +332,16 @@ html {
     text-align: center;
   }
   .aboutMeBody {
-    color: $dark-color;
+    color: #000;
     font-size: 1.2rem;
     font-weight: bolder;
     word-spacing: 3px;
     line-height: 1.3;
     max-width: 60ch;
+    div {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
   }
   .mySocials {
     display: flex;
@@ -330,10 +360,11 @@ html {
     }
   }
   .goodbye {
+    color: #000;
     font-size: 1.2rem;
     max-width: 60ch;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     font-weight: bolder;
     span {
       letter-spacing: 1px;
@@ -359,14 +390,6 @@ html {
 }
 
 // Media Queries
-@media only screen and (max-width: 1447px) {
-  .redditProject {
-    img {
-      height: auto;
-      max-width: 65vw;
-    }
-  }
-}
 @media only screen and (max-width: 1111px) {
   .welcome p {
     font-size: 2.5rem;
@@ -384,6 +407,7 @@ html {
   .skillsContainer .skillsIcons {
     grid-template-columns: repeat(1, 1fr);
     gap: 0;
+    margin-top: 0px;
   }
   .projectContainer img {
     height: auto;
@@ -430,6 +454,14 @@ html {
   .aboutContainerInside {
     max-width: 75vw;
   }
+  .skillsContainer .faContainer {
+    gap: 0px;
+  }
+}
+@media only screen and (max-width: 644px) {
+  .projectsHeader p {
+    font-size: 0.8rem;
+  }
 }
 @media only screen and (max-width: 637px) {
   .skillsContainer {
@@ -447,6 +479,12 @@ html {
     font-size: 1.4rem;
     font-weight: bold;
   }
+
+  .skillsContainer .faContainer .imgContainer img {
+    max-height: 22.38px;
+    width: auto;
+    align-self: center;
+  }
   .projectsContainer {
     .screenshotRight {
       right: 70px;
@@ -456,16 +494,7 @@ html {
     }
   }
 }
-@media only screen and (max-width: 737px) {
-  .skillsContainer .faContainer {
-    gap: 0px;
-  }
-}
-@media only screen and (max-width: 644px) {
-  .projectsHeader p {
-    font-size: 0.8rem;
-  }
-}
+
 @media only screen and (max-width: 575px) {
   .projectsContainer {
     .projectNav {
@@ -487,7 +516,18 @@ html {
     }
   }
 }
+@media only screen and (max-width: 483px) {
+  .skillsContainer {
+    padding: 50px;
+    .description p {
+      width: 84vw;
+    }
+  }
+}
 @media only screen and (max-width: 440px) {
+  .mobileBar {
+    display: none;
+  }
   .appNavInside .navLinkContainer a,
   .appNavInside .navLinkContainer a:visited {
     margin: 0 4px;

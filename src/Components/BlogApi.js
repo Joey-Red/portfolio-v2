@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import blogApi1 from "../img/ProjectScreenshots/blogApi1.png";
-import blogApi2 from "../img/ProjectScreenshots/blogApi2.png";
-import blogApi3 from "../img/ProjectScreenshots/blogApi3.png";
-import blogApi4 from "../img/ProjectScreenshots/blogApi4.png";
-import blogApi5 from "../img/ProjectScreenshots/blogApi5.png";
+
+import blogApi1 from "../img/PjScreenshots2/Blog1.png";
+import blogApi2 from "../img/PjScreenshots2/Blog2.png";
+import blogApi3 from "../img/PjScreenshots2/Blog3.png";
+import blogApi4 from "../img/PjScreenshots2/Blog4.png";
+import blogApi5 from "../img/PjScreenshots2/Blog5.png";
 
 function BlogApi() {
   let [activePhoto, setActivePhoto] = useState(1);
@@ -81,28 +82,31 @@ function BlogApi() {
           ></FontAwesomeIcon>
         </button>
       </div>
-      <h3>blogApi</h3>
-      <div className="projectDescription">
-        This project is a blog using the MERN stack. Where you can create posts,
-        comment, edit, delete etc. It uses a monorepo where the React front end
-        and Node/Express backend are hosted on heroku. This project uses MongoDB
-        for the database.
-      </div>
-      <div className="projectLinks">
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://fish-blog-api-client.herokuapp.com/"
-        >
-          Live project link
-        </a>
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://github.com/Joey-Red/blogApi"
-        >
-          Link to the Github repo
-        </a>
+
+      <div className="descrContainer">
+        <h3>blogApi</h3>
+        <div className="projectDescription">
+          This project is a blog using the MERN stack. Where you can create
+          posts, comment, edit, delete etc. It uses a monorepo where the React
+          front end and Node/Express backend are hosted on heroku. This project
+          uses MongoDB for the database.
+        </div>
+        <div className="projectLinks">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://fish-blog-api-client.herokuapp.com/"
+          >
+            Live project link
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/Joey-Red/blogApi"
+          >
+            Link to the Github repo
+          </a>
+        </div>
       </div>
     </div>
   );

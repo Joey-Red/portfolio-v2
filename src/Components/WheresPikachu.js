@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import WP1 from "../img/ProjectScreenshots/WP1.png";
-import WP2 from "../img/ProjectScreenshots/WP2.png";
-import WP3 from "../img/ProjectScreenshots/WP3.png";
+import WP1 from "../img/PjScreenshots2/WP1.png";
+import WP2 from "../img/PjScreenshots2/WP2.png";
+import WP3 from "../img/PjScreenshots2/WP3.png";
 
 function WheresPikachu() {
   let [activePhoto, setActivePhoto] = useState(1);
@@ -65,28 +65,30 @@ function WheresPikachu() {
           ></FontAwesomeIcon>
         </button>
       </div>
-      <h3>Where's Pikachu?!</h3>
-      <div className="projectDescription">
-        This project is an I spy game, where you get a list of Pokemon to find,
-        you search for them and catch them. There are three different levels, it
-        uses a React front end and Firebase to check coordinates you submit,
-        works on any screen size.
-      </div>
-      <div className="projectLinks">
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://joey-red.github.io/wheres-pikachu/"
-        >
-          Live project link
-        </a>
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://github.com/Joey-Red/wheres-pikachu"
-        >
-          Link to the Github repo
-        </a>
+      <div className="descrContainer">
+        <h3>Where's Pikachu?!</h3>
+        <div className="projectDescription">
+          This project is an I spy game, where you get a list of Pokemon to
+          find, you search for them and catch them. There are three different
+          levels, it uses a React front end and Firebase to check coordinates
+          you submit, works on any screen size.
+        </div>
+        <div className="projectLinks">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://joey-red.github.io/wheres-pikachu/"
+          >
+            Live project link
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/Joey-Red/wheres-pikachu"
+          >
+            Link to the Github repo
+          </a>
+        </div>
       </div>
     </div>
   );

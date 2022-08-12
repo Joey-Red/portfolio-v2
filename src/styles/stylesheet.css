@@ -83,6 +83,14 @@ html {
   right: 40px;
   top: 30px;
 }
+.appNavInside .turnButton {
+  transform: rotateZ(90deg);
+  transition: 1s;
+}
+.appNavInside .reverseTurn {
+  transform: rotateZ(180deg);
+  transition: 1s;
+}
 
 .appNav::after {
   content: "";
@@ -118,6 +126,7 @@ html {
 }
 
 .skillsContainer {
+  border-top: solid #131515 1px;
   background-color: #339989;
   display: flex;
   align-items: center;
@@ -144,7 +153,7 @@ html {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   font-size: 2rem;
-  justify-content: center;
+  margin-top: 57px;
 }
 .skillsContainer .faContainer {
   display: flex;
@@ -172,6 +181,15 @@ html {
   justify-content: flex-end;
   align-self: flex-end;
   text-align: left;
+}
+.skillsContainer .faContainer .imgContainer img {
+  max-height: 32px;
+  width: auto;
+  align-self: center;
+}
+
+.projectPageContainer {
+  border-top: solid #131515 1px;
 }
 
 .projectsHeader {
@@ -207,6 +225,9 @@ html {
   width: 40px;
   border: none;
   margin: 0px 20px;
+}
+.projectsContainer .none {
+  filter: grayscale(1);
 }
 .projectsContainer #activeProject {
   position: relative;
@@ -270,7 +291,7 @@ html {
   margin: 0 auto;
   font-size: 1.2rem;
   font-weight: bolder;
-  min-height: 100px;
+  min-height: 115px;
 }
 .projectContainer .projectLinks {
   display: flex;
@@ -285,6 +306,10 @@ html {
   font-weight: bold;
 }
 
+.descrContainer {
+  min-height: 200px;
+}
+
 .mainContent {
   display: flex;
   position: relative;
@@ -292,6 +317,7 @@ html {
 }
 
 .aboutContainer {
+  border-top: solid #131515 1px;
   background-color: #339989;
   display: flex;
   flex-direction: column;
@@ -302,12 +328,16 @@ html {
   text-align: center;
 }
 .aboutContainer .aboutMeBody {
-  color: #131515;
+  color: #000;
   font-size: 1.2rem;
   font-weight: bolder;
   word-spacing: 3px;
   line-height: 1.3;
   max-width: 60ch;
+}
+.aboutContainer .aboutMeBody div {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 .aboutContainer .mySocials {
   display: flex;
@@ -327,10 +357,11 @@ html {
   margin: 0px 4px;
 }
 .aboutContainer .goodbye {
+  color: #000;
   font-size: 1.2rem;
   max-width: 60ch;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   font-weight: bolder;
 }
 .aboutContainer .goodbye span {
@@ -363,12 +394,6 @@ html {
   justify-self: flex-end;
 }
 
-@media only screen and (max-width: 1447px) {
-  .redditProject img {
-    height: auto;
-    max-width: 65vw;
-  }
-}
 @media only screen and (max-width: 1111px) {
   .welcome p {
     font-size: 2.5rem;
@@ -384,6 +409,7 @@ html {
   .skillsContainer .skillsIcons {
     grid-template-columns: repeat(1, 1fr);
     gap: 0;
+    margin-top: 0px;
   }
   .projectContainer img {
     height: auto;
@@ -420,6 +446,14 @@ html {
   .aboutContainerInside {
     max-width: 75vw;
   }
+  .skillsContainer .faContainer {
+    gap: 0px;
+  }
+}
+@media only screen and (max-width: 644px) {
+  .projectsHeader p {
+    font-size: 0.8rem;
+  }
 }
 @media only screen and (max-width: 637px) {
   .skillsContainer {
@@ -439,21 +473,16 @@ html {
     font-size: 1.4rem;
     font-weight: bold;
   }
+  .skillsContainer .faContainer .imgContainer img {
+    max-height: 22.38px;
+    width: auto;
+    align-self: center;
+  }
   .projectsContainer .screenshotRight {
     right: 70px;
   }
   .projectsContainer .screenshotLeft {
     left: 70px;
-  }
-}
-@media only screen and (max-width: 737px) {
-  .skillsContainer .faContainer {
-    gap: 0px;
-  }
-}
-@media only screen and (max-width: 644px) {
-  .projectsHeader p {
-    font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -473,7 +502,18 @@ html {
     left: 40px;
   }
 }
+@media only screen and (max-width: 483px) {
+  .skillsContainer {
+    padding: 50px;
+  }
+  .skillsContainer .description p {
+    width: 84vw;
+  }
+}
 @media only screen and (max-width: 440px) {
+  .mobileBar {
+    display: none;
+  }
   .appNavInside .navLinkContainer a,
 .appNavInside .navLinkContainer a:visited {
     margin: 0 4px;

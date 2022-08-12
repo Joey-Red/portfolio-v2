@@ -41,11 +41,7 @@ function Skills() {
           </div>
           <div className="faContainer">
             <div className="imgContainer">
-              <img
-                src={mongoDbLogo}
-                alt="mongoDb"
-                style={{ maxHeight: "32px" }}
-              />{" "}
+              <img src={mongoDbLogo} alt="mongoDb" />{" "}
             </div>
             <div className="insideText">MongoDB</div>
           </div>

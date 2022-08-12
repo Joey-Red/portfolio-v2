@@ -9,8 +9,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function NavBar() {
   let toggleSocials = () => {
-    let hiddenLinks = document.getElementById("linksContainer");
-    hiddenLinks.classList.toggle("hidden");
+    let socialsButton = document.getElementById("toggleSocials");
+    let ghLink = document.getElementById("ghLink");
+    let twLink = document.getElementById("twLink");
+    let liLink = document.getElementById("liLink");
+    if (socialsButton.classList.contains("reverseTurn")) {
+      socialsButton.classList.toggle("reverseTurn");
+      socialsButton.classList.toggle("turnButton");
+    } else if (socialsButton.classList.contains("turnButton")) {
+      socialsButton.classList.toggle("turnButton");
+      socialsButton.classList.toggle("reverseTurn");
+    } else if (
+      !socialsButton.classList.contains("reverseTurn") ||
+      !socialsButton.classList.contains("turnButton")
+    ) {
+      socialsButton.classList.toggle("turnButton");
+    }
+    setTimeout(() => {
+      ghLink.classList.toggle("hidden");
+    }, 1270);
+    setTimeout(() => {
+      twLink.classList.toggle("hidden");
+    }, 1170);
+    setTimeout(() => {
+      liLink.classList.toggle("hidden");
+    }, 1070);
   };
 
   return (
@@ -27,12 +50,17 @@ function NavBar() {
             About
           </a>
         </div>
-        <button onClick={toggleSocials} className="toggleSocials btnAnimation">
+        <button
+          onClick={toggleSocials}
+          className="toggleSocials btnAnimation"
+          id="toggleSocials"
+        >
           <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
         </button>
-        <div className="links hidden" id="linksContainer">
+        <div className="links" id="linksContainer">
           <a
-            className="btnAnimation"
+            id="ghLink"
+            className="btnAnimation hidden"
             rel="noreferrer"
             target="_blank"
             href="https://github.com/Joey-Red"
@@ -42,7 +70,8 @@ function NavBar() {
             </div>
           </a>{" "}
           <a
-            className="btnAnimation"
+            id="twLink"
+            className="btnAnimation hidden"
             rel="noreferrer"
             target="_blank"
             href="https://twitter.com/JoeyDalrymple_"
@@ -52,7 +81,8 @@ function NavBar() {
             </div>{" "}
           </a>
           <a
-            className="btnAnimation"
+            id="liLink"
+            className="btnAnimation hidden"
             rel="noreferrer"
             target="_blank"
             href="https://www.linkedin.com/in/joey-dalrymple-060809228/"

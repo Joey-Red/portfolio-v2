@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import memoryGame from "../img/ProjectScreenshots/MemoryGame.png";
+import memoryGame from "../img/PjScreenshots2/MemoryGame.png";
 function MemoryGame() {
   let [activePhoto, setActivePhoto] = useState(1);
 
@@ -23,7 +23,7 @@ function MemoryGame() {
     <div className="memoryGame projectContainer">
       <div className="mainContent">
         <button
-          className="screenshotButton btnAnimation screenshotLeft"
+          className="screenshotButton screenshotLeft none"
           onClick={prevPhoto}
         >
           <FontAwesomeIcon
@@ -35,7 +35,7 @@ function MemoryGame() {
           <img src={memoryGame} alt="memory game" />
         </div>
         <button
-          className="screenshotButton btnAnimation screenshotRight"
+          className="screenshotButton screenshotRight none"
           onClick={nextPhoto}
         >
           <FontAwesomeIcon
@@ -44,29 +44,32 @@ function MemoryGame() {
           ></FontAwesomeIcon>
         </button>
       </div>
-      <h3>Memory Game</h3>
-      <div className="projectDescription">
-        This is an older project, and it's quite simple. It is a Memory Game.
-        You just have to click each of the pictures, but if you click the same
-        one twice before clicking all of them your score will be reset. This
-        project does not have a back end, and uses React. Not sure what I was
-        thinking with that gradient background.
-      </div>
-      <div className="projectLinks">
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://joey-red.github.io/memory-game/"
-        >
-          Live project link
-        </a>
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://github.com/Joey-Red/memory-game"
-        >
-          Link to the Github repo
-        </a>
+
+      <div className="descrContainer">
+        <h3>Memory Game</h3>
+        <div className="projectDescription">
+          This is an older project, and it's quite simple. It is a Memory Game.
+          You just have to click each of the pictures, but if you click the same
+          one twice before clicking all of them your score will be reset. This
+          project does not have a back end, and uses React. Not sure what I was
+          thinking with that gradient background.
+        </div>
+        <div className="projectLinks">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://joey-red.github.io/memory-game/"
+          >
+            Live project link
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/Joey-Red/memory-game"
+          >
+            Link to the Github repo
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ function About() {
           </h1>
 
           <div className="aboutMeBody">
-            I am a web developer located in Kansas, USA prefering the front end
+            I am a web developer located in Kansas, USA preferring the front end
             side of things, but I do back end as well. I enjoy complex problem
             solving, making cool things, staying fit, and playing with my dogs.
             I have a positive attitude and am good at handling stress and
@@ -32,7 +32,8 @@ function About() {
             </div>{" "}
             A few months into learning, I decided to focus all of my free time
             and effort on web development. I switched solely to a Linux boot,
-            deleted all of my video games and have been working hard.
+            deleted all of my video games and have been working hard and I will
+            continue to do so every day.
           </div>
           <div className="goodbye">
             Thank you for visiting my page. If you would like to contact me,
