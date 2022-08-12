@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.css": "/portfolio-v2/static/css/main.b5fc15a4.css",
-    "main.js": "/portfolio-v2/static/js/main.7b6f4f90.js",
-    "static/media/WP2.png": "/portfolio-v2/static/media/WP2.a8f3b2a34c25a1d2fb60.png",
-    "static/media/WP3.png": "/portfolio-v2/static/media/WP3.a60794c2c408c1e1b5c4.png",
-    "static/media/WP1.png": "/portfolio-v2/static/media/WP1.e5c47c3cdf6e87efd5d3.png",
-    "static/media/MemoryGame.png": "/portfolio-v2/static/media/MemoryGame.d8d0c1a2281008183748.png",
-    "static/media/membersOnly1.png": "/portfolio-v2/static/media/membersOnly1.3f5716633cb6bb62b998.png",
-    "static/media/reddit1.png": "/portfolio-v2/static/media/reddit1.74da5740bf7a787373eb.png",
-    "static/media/membersOnly2.png": "/portfolio-v2/static/media/membersOnly2.4aac56cae3c0632ed59e.png",
-    "static/media/blogApi2.png": "/portfolio-v2/static/media/blogApi2.745f268275f942edb6a2.png",
-    "static/media/blogApi1.png": "/portfolio-v2/static/media/blogApi1.9f6eca81be0462da12dc.png",
-    "static/media/blogApi5.png": "/portfolio-v2/static/media/blogApi5.845b4109e49e107b247c.png",
-    "static/media/blogApi4.png": "/portfolio-v2/static/media/blogApi4.04dcbdd39c29f55fba3e.png",
-    "static/media/blogApi3.png": "/portfolio-v2/static/media/blogApi3.9045d53ff9210de05e02.png",
-    "static/media/reddit3.png": "/portfolio-v2/static/media/reddit3.76e9641586318c0fb29e.png",
-    "static/media/reddit4.png": "/portfolio-v2/static/media/reddit4.86126f4a53f322d986c3.png",
-    "static/media/reddit2.png": "/portfolio-v2/static/media/reddit2.1b40448583cac4fc9c6e.png",
+    "main.css": "/portfolio-v2/static/css/main.72440b0c.css",
+    "main.js": "/portfolio-v2/static/js/main.9a86a2b9.js",
+    "static/media/WP3.png": "/portfolio-v2/static/media/WP3.0527e49d03942e7310cb.png",
+    "static/media/WP2.png": "/portfolio-v2/static/media/WP2.d03bd4d5e487700a40e2.png",
+    "static/media/WP1.png": "/portfolio-v2/static/media/WP1.968c070f837f62339eef.png",
+    "static/media/MO1.png": "/portfolio-v2/static/media/MO1.9e53640ff8385f1c4951.png",
+    "static/media/MemoryGame.png": "/portfolio-v2/static/media/MemoryGame.1ef929e59cbeaf267da1.png",
+    "static/media/MO3.png": "/portfolio-v2/static/media/MO3.16806d9bdc09b7ffadcc.png",
+    "static/media/MO4.png": "/portfolio-v2/static/media/MO4.6f256bf0f56b739b43a8.png",
+    "static/media/Reddit1.png": "/portfolio-v2/static/media/Reddit1.25c66a0148461b364544.png",
+    "static/media/Blog1.png": "/portfolio-v2/static/media/Blog1.8263c0a082e8d7a3fc66.png",
+    "static/media/Blog5.png": "/portfolio-v2/static/media/Blog5.5a73c1a35071d731327a.png",
+    "static/media/MO2.png": "/portfolio-v2/static/media/MO2.494b8e65680d60a9a94e.png",
+    "static/media/Blog4.png": "/portfolio-v2/static/media/Blog4.d3d40617e5cc6b67842a.png",
+    "static/media/Reddit2.png": "/portfolio-v2/static/media/Reddit2.8a454bd9b27eb50c0f58.png",
+    "static/media/Blog3.png": "/portfolio-v2/static/media/Blog3.a20b9350f1e3669e21f7.png",
+    "static/media/Blog2.png": "/portfolio-v2/static/media/Blog2.a1f616811b024c56f440.png",
+    "static/media/Reddit4.png": "/portfolio-v2/static/media/Reddit4.95cd8c1e019e5d5aaf61.png",
+    "static/media/Reddit5.png": "/portfolio-v2/static/media/Reddit5.47659599469fe3b0ec6e.png",
+    "static/media/Reddit3.png": "/portfolio-v2/static/media/Reddit3.d541758e368699705c6a.png",
     "static/media/mongoDbNBBlack.png": "/portfolio-v2/static/media/mongoDbNBBlack.adee793174273d552986.png",
     "index.html": "/portfolio-v2/index.html",
-    "main.b5fc15a4.css.map": "/portfolio-v2/static/css/main.b5fc15a4.css.map",
-    "main.7b6f4f90.js.map": "/portfolio-v2/static/js/main.7b6f4f90.js.map"
+    "main.72440b0c.css.map": "/portfolio-v2/static/css/main.72440b0c.css.map",
+    "main.9a86a2b9.js.map": "/portfolio-v2/static/js/main.9a86a2b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5fc15a4.css",
-    "static/js/main.7b6f4f90.js"
+    "static/css/main.72440b0c.css",
+    "static/js/main.9a86a2b9.js"
   ]
 }
