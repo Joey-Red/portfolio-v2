@@ -536,18 +536,18 @@ html {
     width: 84vw;
   }
   .appNavInside .toggleSocials {
-    right: 0px;
+    right: 10px;
   }
   .appNavInside .linkedIn {
-    right: -37.35px;
+    right: -27.35px;
     top: 70px;
   }
   .appNavInside .gitLink {
-    right: -37.35px;
+    right: -27.35px;
     top: 190px;
   }
   .appNavInside .twitLink {
-    right: -37.35px;
+    right: -27.35px;
     top: 130px;
   }
 }
