@@ -12,9 +12,10 @@ import {
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import WheresPikachu from "./WheresPikachu";
+import MusicWithFriends from "./MusicWithFriends";
 
 function Projects() {
-  let [activeProject, setActiveProject] = useState(1);
+  let [activeProject, setActiveProject] = useState(0);
 
   document.addEventListener("keydown", logKey);
   function logKey(e) {
@@ -30,6 +31,8 @@ function Projects() {
 
   function projectSwitch(activeProject) {
     switch (activeProject) {
+      case 0:
+        return <MusicWithFriends />;
       case 1:
         return <BlogApi />;
       case 2:
@@ -47,7 +50,7 @@ function Projects() {
 
   let nextProject = useCallback(() => {
     if (activeProject === 5) {
-      setActiveProject(1);
+      setActiveProject(0);
     } else {
       setActiveProject(activeProject + 1);
     }
@@ -56,7 +59,7 @@ function Projects() {
 
   let prevProject = useCallback(() => {
     if (activeProject === 1) {
-      setActiveProject(5);
+      setActiveProject(6);
     } else {
       setActiveProject(activeProject - 1);
     }
