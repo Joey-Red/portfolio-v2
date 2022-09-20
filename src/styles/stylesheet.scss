@@ -233,9 +233,7 @@ html {
     @include circleButton();
     margin: 0px 20px;
   }
-  .none {
-    filter: grayscale(1);
-  }
+
   #activeProject {
     position: relative;
     #leftButton {
